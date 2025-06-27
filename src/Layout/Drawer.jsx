@@ -1,5 +1,7 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useMemo } from 'react';
+import { useAuth } from '@/Auth/useAuth';
+
 import {
     List,
     ListItemButton,
@@ -11,11 +13,14 @@ import {
 } from '@mui/material';
 import { useSetAtom } from 'jotai'
 import { drawerOpenAtom } from '@/Layout/atoms';
+import AuthButton from '@/Auth/AuthButton';
+
 
 export function Drawer() {
 
-
     const location = useLocation();
+    const user = useAuth();
+
     const setDrawerOpen = useSetAtom(drawerOpenAtom);
     const theme = useTheme();
     const isMobile = useMediaQuery(theme.breakpoints.down('md'));
@@ -37,6 +42,9 @@ export function Drawer() {
     return (
         <List>
 
+            <AuthButton />
+
+            <Divider />
 
             <ListItemButton
                 selected={isEqual('/')}
@@ -58,6 +66,15 @@ export function Drawer() {
                 <ListItemText primary={'About'} />
             </ListItemButton>
 
+            <ListItemButton
+                selected={isSelected('/meteo')}
+                disabled={false}
+                component={Link}
+                to={"/meteo"}
+                onClick={handleDrawerItemClick}
+            >
+                <ListItemText primary={'Meteo'} />
+            </ListItemButton>
 
         </List>
     );

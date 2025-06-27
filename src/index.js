@@ -8,14 +8,23 @@ import { Provider as JotaiProvider } from 'jotai';
 
 import { CssBaseline } from '@mui/material';
 
+import { Amplify } from 'aws-amplify';
+import awsconfig from './Auth/aws-exports';
+import { Authenticator } from '@aws-amplify/ui-react';
+import '@aws-amplify/ui-react/styles.css'; // Optional: Import Amplify UI styles
+Amplify.configure(awsconfig);
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter basename={process.env.PUBLIC_URL}>
-      <CssBaseline />
-      <JotaiProvider>
-        <App />
-      </JotaiProvider>
+      <Authenticator.Provider>
+        <CssBaseline />
+        <JotaiProvider>
+          <App />
+        </JotaiProvider>
+      </Authenticator.Provider>
     </BrowserRouter >
   </React.StrictMode>
 );
