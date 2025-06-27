@@ -42,9 +42,7 @@ export function Drawer() {
     return (
         <List>
 
-            <AuthButton />
 
-            <Divider />
 
             <ListItemButton
                 selected={isEqual('/')}
@@ -66,15 +64,11 @@ export function Drawer() {
                 <ListItemText primary={'About'} />
             </ListItemButton>
 
-            <ListItemButton
-                selected={isSelected('/meteo')}
-                disabled={false}
-                component={Link}
-                to={"/meteo"}
-                onClick={handleDrawerItemClick}
-            >
-                <ListItemText primary={'Meteo'} />
-            </ListItemButton>
+            <Divider />
+
+            <AuthButton />
+
+
 
         </List>
     );

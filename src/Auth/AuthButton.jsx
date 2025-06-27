@@ -44,7 +44,7 @@ const AuthButton = () => {
     return (
         <Box>
             {user === null ?
-                <Button onClick={handleSignIn}>Login</Button>
+                <Button onClick={handleSignIn}>Sign in</Button>
                 :
                 <Box>
                     {/* <span>Welcome, {user.signInDetails?.loginId || 'user'}</span> */}
