@@ -8,10 +8,15 @@ import { AuthPage } from '@/Auth/page';
 import RequireAuth from '@/Auth/RequireAuth';
 import AboutPage from '@/Views/AboutPage';
 import MeteoPage from '@/Views/MeteoPage';
+import WeatherStationsPage from '@/Views/WeatherStationsPage';
 import LocationPage from '@/Views/LocationPage';
-
+import ResponsiveLayout from '@/Views/ResponsiveLayout';
 
 function App() {
+
+
+
+
   return (
     <Box>
       <CssBaseline />
@@ -27,15 +32,23 @@ function App() {
           <Route path="/" element={
             <MeteoPage />
           } />
+          <Route path="/mobile" element={
+            <ResponsiveLayout />
+          } />
           <Route path="/location/:id" element={
-            <RequireAuth>
-              <LocationPage />
-            </RequireAuth>
+            // <RequireAuth>
+            <LocationPage />
+            // </RequireAuth>
           } />
           <Route path="/location" element={
             <RequireAuth>
               <MeteoPage />
             </RequireAuth>
+          } />
+          <Route path="/weather-stations" element={
+            // <RequireAuth>
+            <WeatherStationsPage />
+            // </RequireAuth>
           } />
         </Routes>
       </Layout>

@@ -9,7 +9,8 @@ const AboutPage = () => {
             <PageHeader title="About" />
 
             <Typography>
-                This data is pulled from <a href="https://www.weather.gov" target="_blank" rel="noopener noreferrer">weather.gov</a>
+                This application pulls data from the High Resolution Rapid Refresh (HRRR)
+                and North American Model (NAM) weather models for analysis.
             </Typography>
 
 

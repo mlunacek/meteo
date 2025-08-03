@@ -24,7 +24,7 @@ export const submitSQS = async ({ queue_url, num_hours, num_variables, setRespon
             }
         })
 
-        console.log("body", body)
+        // console.log("body", body)
 
         const res = await fetch(`${URL}/sqs/send_message`, {
             method: 'POST',
@@ -61,7 +61,7 @@ export const fetchJson = async ({ key, bucket, operation, setFunction }) => {
 
     try {
         const decoded = jwtDecode(token);
-        console.log("decoded", decoded);
+        // console.log("decoded", decoded);
     }
     catch (err) {
         console.error('Error decoding', err.message || err);
@@ -83,10 +83,10 @@ export const fetchJson = async ({ key, bucket, operation, setFunction }) => {
         });
 
         const data = await res.json();
-        console.log(data.url)
+        // console.log(data.url)
         // console.log('Signed URL:', data.url);
         const response = await fetch(data?.url);
-        console.log("response", response.status)
+        // console.log("response", response.status)
         if (!response.ok) {
             throw new Error('Failed to fetch file');
         }

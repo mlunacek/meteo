@@ -7,6 +7,8 @@ export const showFooterAtom = atom(true);
 export const drawerOpenAtom = atomWithStorage('drawer', true);
 
 export const appBarTitleAtom = atom(null);
-
+export const forceMobileAtom = atom(null);
 export const appBarTimeAtom = atom(null);
 export const appBarElevationAtom = atom(null);
+
+

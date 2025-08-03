@@ -68,3 +68,56 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+   {/* <ResponsiveTable
+                location={location}
+                data={data}
+            /> */}
+
+
+
+    {/*  */}
+     
+
+             {/* <Box sx={{ display: 'flex', height: '100vh' }} >
+
+    
+           < Box sx={{ flexGrow: 1, p: 2 }} width={500}>
+
+                <Button variant="text" onClick={() => setOpen(!open)}>
+                    {open ? "hide SkewT" : "show SkewT"}
+                </Button>
+
+                <ResponsiveTable
+                    location={location}
+                    data={data} />
+
+            </Box>
+
+            <Drawer
+                anchor="right"
+                open={open}
+                variant="persistent"
+                sx={{
+                    width: drawerWidth,
+                    flexShrink: 0,
+                    '& .MuiDrawer-paper': {
+                        width: drawerWidth,
+                        boxSizing: 'border-box',
+                    },
+                }}
+            >
+                <Box sx={{ display: 'flex', alignItems: 'center', p: 1, justifyContent: 'space-between' }}>
+                    <Typography variant="h6">Settings</Typography>
+                    <IconButton onClick={() => setOpen(false)}>
+                        <ChevronRightIcon />
+                    </IconButton>
+                </Box>
+
+                <Box sx={{ p: 2 }}>
+                    <SkewT
+                        data={sounding} />
+                </Box>
+            </Drawer>
+        </Box > */}

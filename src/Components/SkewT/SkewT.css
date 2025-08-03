@@ -1,0 +1,98 @@
+@font-face {
+    font-family: "iconfont";
+    src: url('/src/Components/WeatherTable/assets/iconfont.woff') format('woff');
+}
+
+.iconfont {
+    font-family: "iconfont"
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    stroke-width: 1px;
+    shape-rendering: crispEdges;
+}
+
+.x.axis path {}
+
+.y.axis path {}
+
+.axis {
+    fill: #000;
+}
+
+.y.axis {
+    font-size: 13px;
+}
+
+.y.axis.hght {
+    font-size: 9px;
+    fill: red;
+}
+
+.x.axis {
+    font-size: 13px;
+}
+
+.y.axis.ticks text {
+    display: none;
+}
+
+.temp {
+    fill: none;
+    stroke: #e41a1c;
+}
+
+.dwpt {
+    fill: none;
+    stroke: #377eb8;
+}
+
+.skline {
+    opacity: 0.8;
+}
+
+.surfaceline {
+    stroke: #858383;
+    fill: none;
+}
+
+.gridline,
+.tempzero {
+    stroke: #dfdfdf;
+    fill: none;
+}
+
+.tempzero {
+    stroke: #aaa;
+}
+
+.windbarb {
+    stroke: #000;
+    fill: none;
+}
+
+.flag {
+    fill: #000;
+}
+
+.overlay {
+    fill: none;
+    pointer-events: all;
+}
+
+.focus.tmpc circle {
+    fill: red;
+    stroke: none;
+}
+
+.focus.dwpc circle {
+    fill: "steelblue";
+    stroke: none;
+}
+
+.focus text {
+    font-size: 12px;
+}

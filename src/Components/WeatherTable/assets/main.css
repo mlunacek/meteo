@@ -1,0 +1,11 @@
+@font-face {
+    font-family: "iconfont";
+    src: url('/src/Components/WeatherTable/assets/iconfont.woff') format('woff');
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    text-align: center;
+    vertical-align: middle;
+}

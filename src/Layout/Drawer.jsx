@@ -42,8 +42,6 @@ export function Drawer() {
     return (
         <List>
 
-
-
             <ListItemButton
                 selected={isEqual('/')}
                 disabled={false}

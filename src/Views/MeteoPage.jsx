@@ -45,6 +45,19 @@ const MeteoPage = () => {
             {
                 user?.isAuthenticated ?
                     <Box sx={{ p: 2, width: "100%", maxWidth: "1200px", mx: "auto" }}>
+
+                        <Box>
+                            <Link
+                                component={RouterLink}
+                                to={`/weather-stations`}
+                                underline="hover"
+                                sx={{ flex: "1 1 200px" }} // Flex-grow layout for wider links
+                            >
+                                Weather stations
+                            </Link>
+                        </Box>
+
+
                         {locations?.map((location, i) => (
                             <Box key={i}>
                                 <Link

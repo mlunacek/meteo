@@ -80,7 +80,6 @@ function Layout({ children }) {
                 minHeight: `calc(100vh - ${drawerTop})`,
             }}
         >
-            <CssBaseline />
 
             <Drawer
                 variant={isMobile ? 'temporary' : 'persistent'}
@@ -114,15 +113,13 @@ function Layout({ children }) {
                 </Box>
             </Drawer>
 
-            <Box sx={{
+            <Box border={1} sx={{
                 overflow: 'hidden', // or 'auto', 'scroll', etc., depending on your need
                 width: '100%',
                 height: '100%',
             }}>
 
-                {/* <Main open={drawerOpen} isMobile={isMobile}> */}
                 {children}
-                {/* </Main> */}
             </Box>
         </Box>
     );
