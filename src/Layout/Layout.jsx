@@ -113,7 +113,7 @@ function Layout({ children }) {
                 </Box>
             </Drawer>
 
-            <Box border={1} sx={{
+            <Box border={0} sx={{
                 overflow: 'hidden', // or 'auto', 'scroll', etc., depending on your need
                 width: '100%',
                 height: '100%',

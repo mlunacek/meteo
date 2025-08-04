@@ -9,6 +9,8 @@ import RequireAuth from '@/Auth/RequireAuth';
 import AboutPage from '@/Views/AboutPage';
 import MeteoPage from '@/Views/MeteoPage';
 import WeatherStationsPage from '@/Views/WeatherStationsPage';
+import WeatherStationsDarkPage from '@/Views/WeatherStationsDarkPage';
+
 import LocationPage from '@/Views/LocationPage';
 import ResponsiveLayout from '@/Views/ResponsiveLayout';
 
@@ -50,9 +52,15 @@ function App() {
             <WeatherStationsPage />
             // </RequireAuth>
           } />
+          <Route path="/weather-stations-dark" element={
+            // <RequireAuth>
+            <WeatherStationsDarkPage />
+            // </RequireAuth>
+          } />
         </Routes>
+
       </Layout>
-    </Box>
+    </Box >
   );
 }
 

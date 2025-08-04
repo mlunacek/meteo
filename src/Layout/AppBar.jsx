@@ -9,7 +9,8 @@ import {
     Select,
     MenuItem,
     Box,
-    useMediaQuery
+    useMediaQuery,
+    Button
 } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
 
@@ -26,7 +27,8 @@ import {
     appBarTitleAtom,
     appBarTimeAtom,
     appBarElevationAtom,
-    forceMobileAtom
+    forceMobileAtom,
+    refreshAtom
 } from '@/Layout/atoms';
 
 import {
@@ -53,6 +55,9 @@ export default function AppBar({ children }) {
     const pagelocation = useLocation();
     const navigate = useNavigate();
     const onLocationPage = pagelocation.pathname.startsWith('/location/');
+    const onStationsPage = pagelocation.pathname.startsWith('/weather-stations');
+
+    const [refresh, setRefresh] = useAtom(refreshAtom)
 
     const locations = useAtomValue(locationsAtom);
     const [location, setLocation] = useAtom(locationAtom)
@@ -144,6 +149,13 @@ export default function AppBar({ children }) {
                     >
                         {appBarTile}
                     </Typography> */}
+
+                    {onStationsPage &&
+                        <Button onClick={() => setRefresh(!refresh)}>
+                            Refresh
+                        </Button>
+                    }
+
 
                     {onLocationPage && location &&
                         <Select

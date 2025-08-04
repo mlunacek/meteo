@@ -38,6 +38,12 @@ const WeatherStationsPage = () => {
                 {data?.map(item => (
                     <Box key={item.metadata.id} paddingTop={2}>
                         <Box paddingBottom={0.5}>
+
+
+
+
+
+
                             <Link
                                 href={item.metadata?.link}
                                 target="_blank"
@@ -45,6 +51,9 @@ const WeatherStationsPage = () => {
                             >
                                 {item.metadata.name}
                             </Link> {item.metadata?.elevation?.toLocaleString()}
+
+
+
                         </Box>
                         <ResponsiveTable data={item} />
                     </Box>
